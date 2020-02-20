@@ -1,0 +1,6 @@
+17:26:31 INFO  : Registering command handlers for SDK TCF services
+17:26:32 INFO  : Launching XSCT server: xsct.bat -interactive F:\DAKSHA\CommSrcs\FPGA\CZT\CZT.sdk\temp_xsdb_launch_script.tcl
+17:26:36 INFO  : XSCT server has started successfully.
+17:26:42 INFO  : Successfully done setting XSCT server connection channel  
+17:26:42 INFO  : Successfully done setting SDK workspace  
+17:26:42 INFO  : Processing command line option -hwspec F:/DAKSHA/CommSrcs/FPGA/CZT/CZT.sdk/BD_wo_axi_wrapper.hdf.

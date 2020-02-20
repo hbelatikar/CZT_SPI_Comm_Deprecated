@@ -1,0 +1,62 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 1820 -y 80 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 1820 -y 800 -defaultsOSRD
+preplace port UART_1_0 -pg 1 -lvl 6 -x 1820 -y 100 -defaultsOSRD
+preplace port SSbar_0 -pg 1 -lvl 6 -x 1820 -y 580 -defaultsOSRD
+preplace port MOSI_0 -pg 1 -lvl 6 -x 1820 -y 600 -defaultsOSRD
+preplace port SCK_0 -pg 1 -lvl 6 -x 1820 -y 620 -defaultsOSRD
+preplace port read_val_out_0 -pg 1 -lvl 6 -x 1820 -y 700 -defaultsOSRD
+preplace port m_axis_tlast_0 -pg 1 -lvl 6 -x 1820 -y 740 -defaultsOSRD
+preplace port MISO -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace portBus m_axis_tdata_0 -pg 1 -lvl 6 -x 1820 -y 720 -defaultsOSRD
+preplace inst CZT_SPI_Comm_0 -pg 1 -lvl 5 -x 1590 -y 660 -defaultsOSRD
+preplace inst Read_Avail -pg 1 -lvl 5 -x 1590 -y 180 -defaultsOSRD -resize 220 116
+preplace inst Event_Avail -pg 1 -lvl 5 -x 1590 -y 320 -defaultsOSRD -resize 220 116
+preplace inst Data_Read -pg 1 -lvl 5 -x 1590 -y 460 -defaultsOSRD -resize 220 116
+preplace inst AXI_Tdata -pg 1 -lvl 5 -x 1590 -y 1020 -defaultsOSRD -resize 220 116
+preplace inst Read_Val -pg 1 -lvl 5 -x 1590 -y 880 -defaultsOSRD -resize 220 116
+preplace inst AXI_Tlast -pg 1 -lvl 5 -x 1590 -y 1160 -defaultsOSRD -resize 220 116
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 150 -y 100 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 480 -y 130 -defaultsOSRD
+preplace inst axi_clock_converter_0 -pg 1 -lvl 3 -x 880 -y 570 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 880 -y 390 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -x 1240 -y 650 -defaultsOSRD
+preplace netloc CZT_SPI_Comm_0_SSbar_0 1 5 1 NJ 580
+preplace netloc CZT_SPI_Comm_0_MOSI_0 1 5 1 NJ 600
+preplace netloc CZT_SPI_Comm_0_SCK_0 1 5 1 NJ 620
+preplace netloc CZT_SPI_Comm_0_rd_avail_0 1 5 1 1760 190n
+preplace netloc CZT_SPI_Comm_0_event_avail_0 1 5 1 1750 330n
+preplace netloc CZT_SPI_Comm_0_data_read_0 1 5 1 1740 470n
+preplace netloc CZT_SPI_Comm_0_m_axis_tdata_0 1 5 1 1790 720n
+preplace netloc CZT_SPI_Comm_0_read_val_out_0 1 5 1 1800 700n
+preplace netloc CZT_SPI_Comm_0_m_axis_tlast_0 1 5 1 1780 740n
+preplace netloc MISO_1 1 0 2 NJ 20 280
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 680 200n
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 4 280 260 690 290 1090 290 1420
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 3 1 1050 410n
+preplace netloc processing_system7_0_FCLK_CLK1 1 2 2 NJ 180 1080
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 2 1070 430 1430
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 700 140n
+preplace netloc processing_system7_0_DDR 1 2 4 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 4 NJ 100 NJ 100 NJ 100 1770J
+preplace netloc processing_system7_0_UART_1 1 2 4 700J 90 NJ 90 NJ 90 1800J
+preplace netloc axi_clock_converter_0_M_AXI 1 3 1 1060 490n
+preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1440 600n
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1390 160n
+preplace netloc axi_interconnect_0_M02_AXI 1 4 1 1410 300n
+preplace netloc axi_interconnect_0_M03_AXI 1 4 1 1400 440n
+preplace netloc axi_interconnect_0_M04_AXI 1 4 1 1410 680n
+preplace netloc axi_interconnect_0_M05_AXI 1 4 1 1390 700n
+levelinfo -pg 1 0 150 480 880 1240 1590 1820
+pagesize -pg 1 -db -bbox -sgen -90 0 2010 1240
+"
+}
+{
+   "da_axi4_cnt":"9",
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"10",
+   "da_ps7_cnt":"2"
+}
