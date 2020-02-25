@@ -1,0 +1,96 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 20, 2020
+ *      Author: user
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "SPIFunctions.h"
+#include "ps7_init.h"
+
+//#define variables go here
+
+
+//Global Variable Declaration here
+
+//Local Functions go here
+char parityCalc (u32);
+
+int main()
+{
+	//Initialize variables here
+	unsigned int frame,dictID,threshVal,cmd,readData;
+	unsigned char eventFlag,pixVal,pixLoc,parity;
+
+	init_platform();	//uncomment in declaration to run code outside SDK
+    //ps7_post_config();
+
+    //Initialize the hardware here
+    initGPIO();
+
+    xil_printf("CZT Communicator Intialized! Enter a command\n");
+
+    while(1){	//Forever loop
+
+    	//Wait for input here
+    	scanf("%d",&frame);
+    	//Extracting dict id
+    	dictID = frame & 0xF000;
+
+    	switch(dictID){
+
+			case(ENRGTHRESH): //Energy set code goes here
+				threshVal = frame & 0x0FFF;
+
+				//Converts the threshold data to frame format
+					//Calculate the parity bit
+					parity = parityCalc(threshVal);
+					//Append the parity to the last bit
+					threshVal = (threshVal <<1)|parity;
+					//Set the first bit high
+
+				//Set the thresh value
+				cmd = 66;
+    			writeToCZT(cmd,threshVal);
+    			//get the thresh value
+				cmd = 323;
+    			readData = readFromCZT(cmd);
+    			//reply back the thresh value
+				xil_printf("%x\n",readData);
+				break;
+
+    		case(PIXENADIS): //Pixel status code goes here
+				pixVal = (frame>>8) & 0x01;	//Pixel to be turned off or on
+    			pixLoc = frame & 0xFF;		//Pixel location in Array
+
+    			//Set the pixel location
+    			cmd = 15;
+    			//Turn the pixel On/off
+    			cmd = 23;
+    			//get the pixel status
+    			cmd = 278;
+    			//reply back the pixel status in frame format
+    			xil_printf("status get\n");
+				break;
+
+    		case(EVENTMODE): //Event mode code goes here
+				eventFlag = frame & 0x00FF;
+				if(eventFlag){
+					//Turn the event mode on here and capture data;
+				}
+				else{
+					//Turn the event mode Off if its On else do nothing;
+				}
+				break;
+    		default: xil_printf("Error");
+				break;
+    	}
+    }
+
+    cleanup_platform();
+    return 0;
+}

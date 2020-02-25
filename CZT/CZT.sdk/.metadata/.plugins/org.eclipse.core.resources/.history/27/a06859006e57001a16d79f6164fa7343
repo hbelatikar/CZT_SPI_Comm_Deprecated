@@ -1,0 +1,20 @@
+/*
+ * SPIFunctions.h
+ *
+ *  Created on: Feb 19, 2020
+ *      Author: Hrishikesh
+ */
+
+#ifndef SRC_SPIFUNCTIONS_H_
+#define SRC_SPIFUNCTIONS_H_
+
+	#include "xparameters.h"
+
+	void initGPIO();
+	void initUART();
+
+	void writeToCZT();
+	void readFromCZT();
+
+	u32 lookUpCd(u32);
+#endif /* SRC_SPIFUNCTIONS_H_ */

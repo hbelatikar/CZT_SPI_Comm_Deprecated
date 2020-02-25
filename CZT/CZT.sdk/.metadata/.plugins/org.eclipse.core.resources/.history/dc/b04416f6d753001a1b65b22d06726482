@@ -1,0 +1,18 @@
+/*
+ * SPIFunctions.h
+ *
+ *  Created on: Feb 19, 2020
+ *      Author: Hrishikesh
+ */
+
+#ifndef SRC_SPIFUNCTIONS_H_
+#define SRC_SPIFUNCTIONS_H_
+
+#include "xparameters.h"
+
+void initGPIO();
+void initUART();
+
+int findCommand(int);
+
+#endif /* SRC_SPIFUNCTIONS_H_ */

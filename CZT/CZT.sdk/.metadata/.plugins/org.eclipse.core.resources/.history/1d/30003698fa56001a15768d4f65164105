@@ -1,0 +1,78 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 20, 2020
+ *      Author: user
+ */
+
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "SPIFunctions.h"
+#include "ps7_init.h"
+
+//#define variables go here
+#define EVENTMODE 0xA000
+#define EVETHRESH 0xE000
+#define PIXENADIS 0xD000
+
+
+//Global Variable Declaration here
+
+
+
+int main()
+{
+	//Initialize variables here
+	unsigned int frame,dictID,threshVal;
+	unsigned char eventFlag,pixVal,pixLoc;
+
+	init_platform();	//uncomment in declaration to run code outside SDK
+    //ps7_post_config();
+
+    //Initialize the hardware here
+    initGPIO();
+
+    xil_printf("CZT Communicator Intialized! Enter a command");
+
+    while(1){	//Forever loop
+
+    	//Wait for input here
+    	scanf("%d",&frame);
+    	//Extracting dict id
+    	dictID = frame & 0xF000;
+
+    	switch(dictID){
+
+    		case(EVENTMODE): //Event mode code goes here
+				eventFlag = frame & 0x00FF;
+				if(eventFlag){
+					//Turn the event mode on here and capture data;
+				}
+				else{
+					//Turn the event mode Off if its On else do nothing;
+				}
+				break;
+
+    		case(EVETHRESH): //Energy set code goes here
+				threshVal = frame & 0x0FFF;
+    			//Set the thresh value
+    			//get the thresh value
+    			//reply back the thresh value
+				break;
+
+    		case(PIXENADIS): //Pixel status code goes here
+				pixVal = (frame>>8) & 0x0F;
+    			pixLoc = frame & 0xFF
+				break;
+
+    		default: xil_printf("Error");
+				break;
+    	}
+    }
+
+    cleanup_platform();
+    return 0;
+}

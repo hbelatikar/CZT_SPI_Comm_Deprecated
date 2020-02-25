@@ -52,12 +52,10 @@
 #include "SPIFunctions.h"
 
 
-int main()
+int hello()
 {
     init_platform();
-
-    xil_printf("Hello!");
-
+    xil_printf("Hello World!");
     cleanup_platform();
     return 0;
 }
