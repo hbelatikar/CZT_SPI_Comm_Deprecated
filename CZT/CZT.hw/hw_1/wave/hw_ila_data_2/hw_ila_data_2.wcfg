@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/DAKSHA/CommSrcs/FPGA/CZT/CZT.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="10731fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="116"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="BD_wo_axi_i/Serial_to_Parallel_0_Parallel" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/Serial_to_Parallel_0_Parallel[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Serial_to_Parallel_0_Parallel[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/Time_Stamp_0_Cycle_count" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/Time_Stamp_0_Cycle_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Time_Stamp_0_Cycle_count[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/xlconcat_0_dout" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/xlconcat_0_dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">xlconcat_0_dout[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_dout" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_dout[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/m_axis_tlast_wire" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/m_axis_tlast_wire</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tlast_wire</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/FIFO_Read_Data_gpio2_io_o" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/FIFO_Read_Data_gpio2_io_o</obj_property>
+      <obj_property name="ObjectShortName">FIFO_Read_Data_gpio2_io_o</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_prog_full" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_prog_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_prog_full</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_prog_empty" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_prog_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_prog_empty</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/CZT_SPI_Comm_0_SSbar" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/CZT_SPI_Comm_0_SSbar</obj_property>
+      <obj_property name="ObjectShortName">CZT_SPI_Comm_0_SSbar</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/MISO_1" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/MISO_1</obj_property>
+      <obj_property name="ObjectShortName">MISO_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_wr_ack" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_wr_ack</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_wr_ack</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_overflow" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_overflow</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_overflow</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_rd_data_count" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_rd_data_count[14:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_rd_data_count[14:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/fifo_generator_0_wr_data_count" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/fifo_generator_0_wr_data_count[13:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_generator_0_wr_data_count[13:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/Time_Stamp_0_overflow" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/Time_Stamp_0_overflow</obj_property>
+      <obj_property name="ObjectShortName">Time_Stamp_0_overflow</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_wo_axi_i/CZT_SPI_Comm_0_event_avail" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_wo_axi_i/CZT_SPI_Comm_0_event_avail</obj_property>
+      <obj_property name="ObjectShortName">CZT_SPI_Comm_0_event_avail</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

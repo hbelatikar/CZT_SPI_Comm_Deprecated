@@ -4,27 +4,43 @@
 ## - uncomment the lines corresponding to used pins
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
-
+# SPI Communication Pin Voltage 
 set_property PACKAGE_PIN V13 [get_ports {SCK_0}];     #Pmod JE7   - Standard PMOD connector 
 set_property PACKAGE_PIN U17 [get_ports {SSbar_0}];   #Pmod JE8   - Standard PMOD connector 
 set_property PACKAGE_PIN Y17 [get_ports {MISO_0}];    #Pmod JE9   - Standard PMOD connector 
 set_property PACKAGE_PIN T17 [get_ports {MOSI_0}];    #Pmod JE10  - Standard PMOD connector 
-            
-#UART Commun
-set_property PACKAGE_PIN V12 [get_ports {UART_1_0_txd}];#Pmod JE7   - Standard PMOD connector
-set_property PACKAGE_PIN J15 [get_ports {UART_1_0_rxd}];#Pmod JE8   - Standard PMOD connector
-
 # SPI Communication Pins
 set_property IOSTANDARD LVCMOS33 [get_ports {SCK_0}];     
 set_property IOSTANDARD LVCMOS33 [get_ports {SSbar_0}];   
 set_property IOSTANDARD LVCMOS33 [get_ports {MISO_0}];    
 set_property IOSTANDARD LVCMOS33 [get_ports {MOSI_0}];    
-                                            
-#UART Communications                            
+                                                       
+#UART Communications Pins
+set_property PACKAGE_PIN V12 [get_ports {UART_1_0_txd}];#Pmod JE7   - Standard PMOD connector
+set_property PACKAGE_PIN J15 [get_ports {UART_1_0_rxd}];#Pmod JE8   - Standard PMOD connector
+#UART Communications Pin Voltage                       
 set_property IOSTANDARD LVCMOS33 [get_ports {UART_1_0_txd}];
 set_property IOSTANDARD LVCMOS33 [get_ports {UART_1_0_rxd}];
 
+#Reset Pin
+set_property PACKAGE_PIN G15 [get_ports {peripheral_aresetn[0]}];
+#Reset Pin Voltage
+set_property IOSTANDARD LVCMOS33 [get_ports {peripheral_aresetn[0]}];
 
+#ILA Debug cores
+#connect_debug_port dbg_hub/clk [get_nets SCK_0_OBUF];
+
+#set_property C_CLK_INPUT_FREQ_HZ  300000000 [get_debug_cores dbg_hub];
+#set_property C_ENABLE_CLK_DIVIDER false     [get_debug_cores dbg_hub];
+#set_property C_USER_SCAN_CHAIN    1         [get_debug_cores dbg_hub];
+
+#Debug nets marked off
+#set_property MARK_DEBUG false [get_nets design_1_i/SSbar_1]
+#set_property MARK_DEBUG false [get_nets design_1_i/SCK_1]
+#set_property MARK_DEBUG false [get_nets design_1_i/fifo_generator_0_prog_empty]
+#set_property MARK_DEBUG false [get_nets design_1_i/fifo_generator_0_prog_full]
+#set_property MARK_DEBUG false [get_nets design_1_i/processing_system7_0_FCLK_CLK1]
+#set_property MARK_DEBUG false [get_nets design_1_i/MISO]
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Unneeded Stuff~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 ##Clock signal

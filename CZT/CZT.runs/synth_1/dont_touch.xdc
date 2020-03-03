@@ -51,17 +51,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==BD_wo_axi_Cmd_O
 # IP: bd/BD_wo_axi/ip/BD_wo_axi_WR_Req_Out_0/BD_wo_axi_WR_Req_Out_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==BD_wo_axi_WR_Req_Out_0 || ORIG_REF_NAME==BD_wo_axi_WR_Req_Out_0} -quiet] -quiet
 
-# IP: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/BD_wo_axi_system_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==BD_wo_axi_system_ila_0_0 || ORIG_REF_NAME==BD_wo_axi_system_ila_0_0} -quiet] -quiet
-
-# Block Designs: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/bd_abc7.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_abc7 || ORIG_REF_NAME==bd_abc7} -quiet] -quiet
-
-# IP: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/bd_abc7_ila_lib_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bd_abc7_ila_lib_0 || ORIG_REF_NAME==bd_abc7_ila_lib_0} -quiet] -quiet
-
 # IP: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/BD_wo_axi_ila_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==BD_wo_axi_ila_0_1 || ORIG_REF_NAME==BD_wo_axi_ila_0_1} -quiet] -quiet
+
+# IP: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/BD_wo_axi_ila_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==BD_wo_axi_ila_0_2 || ORIG_REF_NAME==BD_wo_axi_ila_0_2} -quiet] -quiet
 
 # IP: bd/BD_wo_axi/ip/BD_wo_axi_auto_pc_0/BD_wo_axi_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==BD_wo_axi_auto_pc_0 || ORIG_REF_NAME==BD_wo_axi_auto_pc_0} -quiet] -quiet
@@ -126,18 +120,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 # XDC: bd/BD_wo_axi/ip/BD_wo_axi_WR_Req_Out_0/BD_wo_axi_WR_Req_Out_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==BD_wo_axi_WR_Req_Out_0 || ORIG_REF_NAME==BD_wo_axi_WR_Req_Out_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_abc7_ila_lib_0 || ORIG_REF_NAME==bd_abc7_ila_lib_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_abc7_ila_lib_0 || ORIG_REF_NAME==bd_abc7_ila_lib_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/bd_abc7_ila_lib_0_ooc.xdc
-
-# XDC: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/bd_abc7_ooc.xdc
-
-# XDC: bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/BD_wo_axi_system_ila_0_0_ooc.xdc
-
 # XDC: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/ila_v6_2/constraints/ila_impl.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==BD_wo_axi_ila_0_1 || ORIG_REF_NAME==BD_wo_axi_ila_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
@@ -145,6 +127,14 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==BD_wo_axi_ila_0_1 || ORIG_REF_NAME==BD_wo_axi_ila_0_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/BD_wo_axi_ila_0_1_ooc.xdc
+
+# XDC: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/ila_v6_2/constraints/ila_impl.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==BD_wo_axi_ila_0_2 || ORIG_REF_NAME==BD_wo_axi_ila_0_2} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/ila_v6_2/constraints/ila.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==BD_wo_axi_ila_0_2 || ORIG_REF_NAME==BD_wo_axi_ila_0_2} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/BD_wo_axi_ila_0_2_ooc.xdc
 
 # XDC: bd/BD_wo_axi/ip/BD_wo_axi_auto_pc_0/BD_wo_axi_auto_pc_0_ooc.xdc
 

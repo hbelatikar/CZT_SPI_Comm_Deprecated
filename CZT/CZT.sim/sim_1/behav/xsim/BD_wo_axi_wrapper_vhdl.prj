@@ -1,0 +1,24 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../CZT.srcs/sources_1/new/CZT_SPI_Comm.vhd" \
+"../../../../CZT.srcs/sources_1/new/Serial_to_Parallel.vhd" \
+"../../../../CZT.srcs/sources_1/new/Time_Stamp.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_proc_sys_reset_0_0/sim/BD_wo_axi_proc_sys_reset_0_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_CZT_SPI_Comm_0_0/sim/BD_wo_axi_CZT_SPI_Comm_0_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_Serial_to_Parallel_0_0/sim/BD_wo_axi_Serial_to_Parallel_0_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_Time_Stamp_0_0/sim/BD_wo_axi_Time_Stamp_0_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_axi_gpio_0_0/sim/BD_wo_axi_axi_gpio_0_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_axi_gpio_0_1/sim/BD_wo_axi_axi_gpio_0_1.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_axi_gpio_1_1/sim/BD_wo_axi_axi_gpio_1_1.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_Cmd_Out_0/sim/BD_wo_axi_Cmd_Out_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_WR_Req_Out_0/sim/BD_wo_axi_WR_Req_Out_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/sim/BD_wo_axi_ila_0_1.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/sim/BD_wo_axi.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_1/bd_0/ip/ip_0/sim/bd_6b06_ila_lib_0.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_1/bd_0/sim/bd_6b06.vhd" \
+"../../../../CZT.ip_user_files/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_1/sim/BD_wo_axi_system_ila_0_1.vhd" \
+"../../../../CZT.srcs/sources_1/new/serToPara.vhd" \
+"../../../../CZT.srcs/sim_1/new/setToPara_TB.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,23 +1,8 @@
-07:04:12 **** Build of configuration Debug for project CZT_bsp_xgpiops_intr_example_1 ****
+15:34:10 **** Incremental Build of configuration Debug for project CZT_bsp_xgpiops_intr_example_1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/xgpiops_intr_example.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpiops_intr_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../CZT_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xgpiops_intr_example.d" -MT"src/xgpiops_intr_example.o" -o "src/xgpiops_intr_example.o" "../src/xgpiops_intr_example.c"
-'Finished building: ../src/xgpiops_intr_example.c'
-' '
-'Building target: CZT_bsp_xgpiops_intr_example_1.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CZT_bsp/ps7_cortexa9_0/lib -o "CZT_bsp_xgpiops_intr_example_1.elf"  ./src/xgpiops_intr_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: CZT_bsp_xgpiops_intr_example_1.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size CZT_bsp_xgpiops_intr_example_1.elf  |tee "CZT_bsp_xgpiops_intr_example_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  40848	   2328	  23336	  66512	  103d0	CZT_bsp_xgpiops_intr_example_1.elf
-'Finished building: CZT_bsp_xgpiops_intr_example_1.elf.size'
-' '
+make: Nothing to be done for 'main-build'.
 
-07:04:13 Build Finished (took 1s.380ms)
+15:34:10 Build Finished (took 274ms)
 

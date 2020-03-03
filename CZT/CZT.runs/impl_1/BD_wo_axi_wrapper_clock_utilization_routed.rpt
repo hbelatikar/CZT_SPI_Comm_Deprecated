@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Feb 19 16:37:09 2020
+| Date         : Fri Feb 28 13:11:05 2020
 | Host         : DESKTOP-HM1JLKG running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file BD_wo_axi_wrapper_clock_utilization_routed.rpt
 | Design       : BD_wo_axi_wrapper
@@ -24,10 +24,11 @@ Table of Contents
 8. Device Cell Placement Summary for Global Clock g1
 9. Device Cell Placement Summary for Global Clock g2
 10. Device Cell Placement Summary for Global Clock g3
-11. Clock Region Cell Placement per Global Clock: Region X0Y0
-12. Clock Region Cell Placement per Global Clock: Region X1Y0
-13. Clock Region Cell Placement per Global Clock: Region X0Y1
-14. Clock Region Cell Placement per Global Clock: Region X1Y1
+11. Device Cell Placement Summary for Global Clock g4
+12. Clock Region Cell Placement per Global Clock: Region X0Y0
+13. Clock Region Cell Placement per Global Clock: Region X1Y0
+14. Clock Region Cell Placement per Global Clock: Region X0Y1
+15. Clock Region Cell Placement per Global Clock: Region X1Y1
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -35,7 +36,7 @@ Table of Contents
 +----------+------+-----------+-----+--------------+--------+
 | Type     | Used | Available | LOC | Clock Region | Pblock |
 +----------+------+-----------+-----+--------------+--------+
-| BUFGCTRL |    4 |        32 |   0 |            0 |      0 |
+| BUFGCTRL |    5 |        32 |   0 |            0 |      0 |
 | BUFH     |    0 |        48 |   0 |            0 |      0 |
 | BUFIO    |    0 |         8 |   0 |            0 |      0 |
 | BUFMR    |    0 |         4 |   0 |            0 |      0 |
@@ -51,10 +52,11 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+-------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                                | Net                                             |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+-------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 4 |        7055 |               1 |      100.000 | clk_fpga_1                                                                                 | BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 1 |         465 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O      | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i          |
-| g2        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 3 |         434 |               0 |       20.000 | clk_fpga_0                                                                                 | BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
-| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 1 |           1 |              32 |              |                                                                                            | BD_wo_axi_i/Time_Stamp_0/overflow_reg_i_2/O                               | BD_wo_axi_i/Time_Stamp_0/state                  |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 3 |        4757 |               0 |       33.333 | clk_fpga_2                                                                                 | BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG/O | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2 |
+| g1        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 4 |        2247 |               1 |      100.000 | clk_fpga_1                                                                                 | BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
+| g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 1 |         465 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O      | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i          |
+| g3        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 2 |         434 |               0 |       20.000 | clk_fpga_0                                                                                 | BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
+| g4        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y4 | n/a          |                 2 |           1 |              32 |              |                                                                                            | BD_wo_axi_i/Time_Stamp_0/overflow_reg_i_2/O                               | BD_wo_axi_i/Time_Stamp_0/state                  |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+-------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -66,10 +68,11 @@ Table of Contents
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                                                               | Driver Pin                                                                                 | Net                                                                  |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-| src0      | g2        | PS7/FCLKCLK[0]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |              20.000 | clk_fpga_0                                                                                 | BD_wo_axi_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]                                     | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]         |
-| src0      | g0        | PS7/FCLKCLK[1]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |             100.000 | clk_fpga_1                                                                                 | BD_wo_axi_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]                                     | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]         |
-| src1      | g1        | BSCANE2/TCK     | None       | BSCAN_X0Y0   | X0Y0         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |
-| src2      | g3        | FDCE/Q          | None       | SLICE_X21Y68 | X0Y1         |           1 |              33 |                     |                                                                                            | BD_wo_axi_i/Time_Stamp_0/U0/state_reg/Q                                                    | BD_wo_axi_i/Time_Stamp_0/U0/state_reg_0                              |
+| src0      | g3        | PS7/FCLKCLK[0]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |              20.000 | clk_fpga_0                                                                                 | BD_wo_axi_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]                                     | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]         |
+| src0      | g1        | PS7/FCLKCLK[1]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |             100.000 | clk_fpga_1                                                                                 | BD_wo_axi_i/processing_system7_0/inst/PS7_i/FCLKCLK[1]                                     | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]         |
+| src0      | g0        | PS7/FCLKCLK[2]  | PS7_X0Y0   | PS7_X0Y0     | X0Y1         |           1 |               0 |              33.333 | clk_fpga_2                                                                                 | BD_wo_axi_i/processing_system7_0/inst/PS7_i/FCLKCLK[2]                                     | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]         |
+| src1      | g2        | BSCANE2/TCK     | None       | BSCAN_X0Y0   | X0Y0         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |
+| src2      | g4        | FDCE/Q          | None       | SLICE_X31Y49 | X1Y0         |           1 |              33 |                     |                                                                                            | BD_wo_axi_i/Time_Stamp_0/U0/state_reg/Q                                                    | BD_wo_axi_i/Time_Stamp_0/U0/state_reg_0                              |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -81,8 +84,8 @@ Table of Contents
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------+---------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                             | Net                                                     |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------+---------------------------------------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X39Y48/A5FF | X1Y0         |         230 |               4 |              |       | BD_wo_axi_i/CZT_SPI_Comm_0/U0/m_axis_tlast_reg/Q                       | BD_wo_axi_i/CZT_SPI_Comm_0/U0/m_axis_tlast              - Static -
-| 1        | FDRE/Q          | None       | SLICE_X29Y49/AFF  | X1Y0         |         222 |               4 |              |       | BD_wo_axi_i/FIFO_Read_Data/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[0]/Q | BD_wo_axi_i/FIFO_Read_Data/U0/gpio_core_1/gpio2_io_o[0] - Static -
+| 0        | FDRE/Q          | None       | SLICE_X36Y40/A5FF | X1Y0         |         230 |               4 |              |       | BD_wo_axi_i/CZT_SPI_Comm_0/U0/m_axis_tlast_reg/Q                       | BD_wo_axi_i/CZT_SPI_Comm_0/U0/m_axis_tlast              - Static -
+| 1        | FDRE/Q          | None       | SLICE_X26Y52/AFF  | X1Y1         |         222 |               4 |              |       | BD_wo_axi_i/FIFO_Read_Data/U0/gpio_core_1/Dual.gpio2_Data_Out_reg[0]/Q | BD_wo_axi_i/FIFO_Read_Data/U0/gpio_core_1/gpio2_io_o[0] - Static -
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+------------------------------------------------------------------------+---------------------------------------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -97,10 +100,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1755 |  1100 |  671 |   400 |    0 |    20 |    6 |    10 |    0 |    20 |
-| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2189 |  1100 |  680 |   350 |    0 |    40 |    5 |    20 |    0 |    20 |
-| X0Y1              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1426 |  1100 |  492 |   400 |    0 |    20 |    9 |    10 |    0 |    20 |
-| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2300 |  1100 |  918 |   350 |    0 |    40 |   16 |    20 |    0 |    20 |
+| X0Y0              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 3369 |  1100 | 1403 |   400 |    0 |    20 |    9 |    10 |    0 |    20 |
+| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2772 |  1100 |  802 |   350 |    0 |    40 |   12 |    20 |    0 |    20 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  885 |  1100 |  290 |   400 |    0 |    20 |    5 |    10 |    0 |    20 |
+| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  599 |  1100 |  201 |   350 |    0 |    40 |   10 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -112,8 +115,8 @@ All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
-| Y1 |  3 |  1 |
-| Y0 |  2 |  3 |
+| Y1 |  2 |  3 |
+| Y0 |  3 |  4 |
 +----+----+----+
 
 
@@ -123,7 +126,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                             |
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_fpga_1 |     100.000 | {0.000 50.000} |        6797 |        1 |              0 |        0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
+| g0        | BUFG/O          | n/a               | clk_fpga_2 |      33.333 | {0.000 16.667} |        4514 |        0 |              0 |        0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2 |
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -134,18 +137,40 @@ All Modules
 +----+-------+-------+
 |    | X0    | X1    |
 +----+-------+-------+
-| Y1 |   878 |  2537 |
-| Y0 |  1668 |  1715 |
+| Y1 |     0 |   131 |
+| Y0 |  2571 |  1812 |
 +----+-------+-------+
 
 
 8. Device Cell Placement Summary for Global Clock g1
 ----------------------------------------------------
 
++-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                             |
++-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
+| g1        | BUFG/O          | n/a               | clk_fpga_1 |     100.000 | {0.000 50.000} |        2236 |        1 |              0 |        0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
++-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+------+
+|    | X0   | X1   |
++----+------+------+
+| Y1 |  629 |  184 |
+| Y0 |  878 |  546 |
++----+------+------+
+
+
+9. Device Cell Placement Summary for Global Clock g2
+----------------------------------------------------
+
 +-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
 +-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
-| g1        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         462 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
+| g2        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         462 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
 +-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -161,13 +186,13 @@ All Modules
 +----+----+------+
 
 
-9. Device Cell Placement Summary for Global Clock g2
-----------------------------------------------------
+10. Device Cell Placement Summary for Global Clock g3
+-----------------------------------------------------
 
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                             |
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
-| g2        | BUFG/O          | n/a               | clk_fpga_0 |      20.000 | {0.000 10.000} |         407 |        0 |              0 |        0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
+| g3        | BUFG/O          | n/a               | clk_fpga_0 |      20.000 | {0.000 10.000} |         407 |        0 |              0 |        0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-----------------+-------------------+------------+-------------+----------------+-------------+----------+----------------+----------+-------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -175,21 +200,21 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+-----+
-|    | X0   | X1  |
-+----+------+-----+
-| Y1 |  177 |   0 |
-| Y0 |  200 |  30 |
-+----+------+-----+
++----+------+----+
+|    | X0   | X1 |
++----+------+----+
+| Y1 |  166 |  0 |
+| Y0 |  241 |  0 |
++----+------+----+
 
 
-10. Device Cell Placement Summary for Global Clock g3
+11. Device Cell Placement Summary for Global Clock g4
 -----------------------------------------------------
 
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                            |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------+
-| g3        | BUFG/O          | n/a               |       |             |               |          33 |        0 |              0 |        0 | BD_wo_axi_i/Time_Stamp_0/state |
+| g4        | BUFG/O          | n/a               |       |             |               |          33 |        0 |              0 |        0 | BD_wo_axi_i/Time_Stamp_0/state |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+--------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -197,66 +222,69 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+----+
-|    | X0  | X1 |
-+----+-----+----+
-| Y1 |  33 |  0 |
-| Y0 |   0 |  0 |
-+----+-----+----+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y1 |  0 |  24 |
+| Y0 |  0 |   9 |
++----+----+-----+
 
 
-11. Clock Region Cell Placement per Global Clock: Region X0Y0
+12. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                             |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1668 |               0 | 1555 |    111 |    1 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
-| g2        | n/a   | BUFG/O          | None       |         200 |               0 |  200 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | n/a   | BUFG/O          | None       |        2571 |               0 | 2297 |    266 |    7 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2 |
+| g1        | n/a   | BUFG/O          | None       |         878 |               0 |  831 |     47 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
+| g3        | n/a   | BUFG/O          | None       |         241 |               0 |  241 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-12. Clock Region Cell Placement per Global Clock: Region X1Y0
+13. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                             |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1714 |               1 | 1698 |     15 |    1 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
-| g1        | n/a   | BUFG/O          | None       |         462 |               0 |  462 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i          |
-| g2        | n/a   | BUFG/O          | None       |          30 |               0 |   29 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | n/a   | BUFG/O          | None       |        1812 |               0 | 1766 |     46 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2 |
+| g1        | n/a   | BUFG/O          | None       |         545 |               1 |  544 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
+| g2        | n/a   | BUFG/O          | None       |         462 |               0 |  462 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i          |
+| g4        | n/a   | BUFG/O          | None       |           1 |               8 |    8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/Time_Stamp_0/state                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-13. Clock Region Cell Placement per Global Clock: Region X0Y1
+14. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                             |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         878 |               0 | 856 |     22 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
-| g2        | n/a   | BUFG/O          | None       |         177 |               0 | 176 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
-| g3        | n/a   | BUFG/O          | None       |           1 |              32 |  32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/Time_Stamp_0/state                  |
+| g1        | n/a   | BUFG/O          | None       |         629 |               0 | 611 |     18 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
+| g3        | n/a   | BUFG/O          | None       |         166 |               0 | 164 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-14. Clock Region Cell Placement per Global Clock: Region X1Y1
+15. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                             |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2537 |               0 | 2300 |    231 |    5 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                             |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         131 |               0 | 131 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2 |
+| g1        | n/a   | BUFG/O          | None       |         184 |               0 | 184 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1 |
+| g4        | n/a   | BUFG/O          | None       |           0 |              24 |  24 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_wo_axi_i/Time_Stamp_0/state                  |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -264,21 +292,29 @@ All Modules
 
 
 # Location of BUFG Primitives 
-set_property LOC BUFGCTRL_X0Y2 [get_cells dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck]
+set_property LOC BUFGCTRL_X0Y3 [get_cells dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck]
+set_property LOC BUFGCTRL_X0Y2 [get_cells BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG]
 set_property LOC BUFGCTRL_X0Y0 [get_cells BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG]
 set_property LOC BUFGCTRL_X0Y1 [get_cells BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG]
-set_property LOC BUFGCTRL_X0Y3 [get_cells BD_wo_axi_i/Time_Stamp_0/overflow_reg_i_2]
+set_property LOC BUFGCTRL_X0Y4 [get_cells BD_wo_axi_i/Time_Stamp_0/overflow_reg_i_2]
 
 # Location of IO Primitives which is load of clock spine
 set_property LOC IOB_X0Y43 [get_cells SCK_0_OBUF_inst]
 
 # Location of clock ports
 
-# Clock net "dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i" driven by instance "dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck" located at site "BUFGCTRL_X0Y2"
+# Clock net "dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i" driven by instance "dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck" located at site "BUFGCTRL_X0Y3"
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i"}]]]
 resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2" driven by instance "BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_2.FCLK_CLK_2_BUFG" located at site "BUFGCTRL_X0Y2"
+#startgroup
+create_pblock {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2}
+add_cells_to_pblock [get_pblocks  {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2"}]]]
+resize_pblock [get_pblocks {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK2}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK1" driven by instance "BD_wo_axi_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG" located at site "BUFGCTRL_X0Y0"
@@ -292,12 +328,12 @@ resize_pblock [get_pblocks {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK
 #startgroup
 create_pblock {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0}
 add_cells_to_pblock [get_pblocks  {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0"}]]]
-resize_pblock [get_pblocks {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_BD_wo_axi_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
-# Clock net "BD_wo_axi_i/Time_Stamp_0/state" driven by instance "BD_wo_axi_i/Time_Stamp_0/overflow_reg_i_2" located at site "BUFGCTRL_X0Y3"
+# Clock net "BD_wo_axi_i/Time_Stamp_0/state" driven by instance "BD_wo_axi_i/Time_Stamp_0/overflow_reg_i_2" located at site "BUFGCTRL_X0Y4"
 #startgroup
 create_pblock {CLKAG_BD_wo_axi_i/Time_Stamp_0/state}
 add_cells_to_pblock [get_pblocks  {CLKAG_BD_wo_axi_i/Time_Stamp_0/state}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BD_wo_axi_i/Time_Stamp_0/state"}]]]
-resize_pblock [get_pblocks {CLKAG_BD_wo_axi_i/Time_Stamp_0/state}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+resize_pblock [get_pblocks {CLKAG_BD_wo_axi_i/Time_Stamp_0/state}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup

@@ -15,7 +15,6 @@
       "proc_sys_reset_0": "",
       "CZT_SPI_Comm_0": "",
       "Serial_to_Parallel_0": "",
-      "Time_Stamp_0": "",
       "xlconcat_0": "",
       "axi_interconnect_0": {
         "xbar": "",
@@ -33,8 +32,9 @@
       "Cmd_Out": "",
       "CZT_WR_Req": "",
       "CZT_Data_RW": "",
-      "CZT_SPI_Comm_ILA": "",
-      "FIFO_ILA": ""
+      "FIFO_ILA": "",
+      "Time_Stamp_0": "",
+      "CZT_SPI_Comm_ILA": ""
     },
     "interface_ports": {
       "DDR": {
@@ -126,13 +126,13 @@
         "xci_name": "BD_wo_axi_processing_system7_0_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
-            "value": "666.666687"
+            "value": "650.000000"
           },
           "PCW_ACT_CAN_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
           },
           "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
-            "value": "10.158730"
+            "value": "10.096154"
           },
           "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -147,7 +147,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ": {
-            "value": "10.000000"
+            "value": "30.000000"
           },
           "PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -171,28 +171,31 @@
             "value": "200.000000"
           },
           "PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
           },
           "PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
           },
           "PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
           },
           "PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
           },
           "PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
           },
           "PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
           },
           "PCW_ACT_UART_PERIPHERAL_FREQMHZ": {
             "value": "100.000000"
           },
           "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
-            "value": "111.111115"
+            "value": "108.333336"
+          },
+          "PCW_APU_PERIPHERAL_FREQMHZ": {
+            "value": "650"
           },
           "PCW_CLK0_FREQ": {
             "value": "50000000"
@@ -201,12 +204,21 @@
             "value": "10000000"
           },
           "PCW_CLK2_FREQ": {
-            "value": "10000000"
+            "value": "30000000"
           },
           "PCW_CLK3_FREQ": {
             "value": "10000000"
           },
+          "PCW_CRYSTAL_PERIPHERAL_FREQMHZ": {
+            "value": "50"
+          },
+          "PCW_DDR_RAM_HIGHADDR": {
+            "value": "0x1FFFFFFF"
+          },
           "PCW_EN_CLK1_PORT": {
+            "value": "1"
+          },
+          "PCW_EN_CLK2_PORT": {
             "value": "1"
           },
           "PCW_EN_EMIO_GPIO": {
@@ -221,13 +233,22 @@
           "PCW_FCLK_CLK1_BUF": {
             "value": "TRUE"
           },
+          "PCW_FCLK_CLK2_BUF": {
+            "value": "TRUE"
+          },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10"
+          },
+          "PCW_FPGA2_PERIPHERAL_FREQMHZ": {
+            "value": "30"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
           },
           "PCW_FPGA_FCLK1_ENABLE": {
+            "value": "1"
+          },
+          "PCW_FPGA_FCLK2_ENABLE": {
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_ENABLE": {
@@ -255,7 +276,10 @@
             "value": "1"
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
-            "value": "533.333374"
+            "value": "525.000000"
+          },
+          "PCW_UIPARAM_DDR_FREQ_MHZ": {
+            "value": "525"
           }
         }
       },
@@ -523,54 +547,6 @@
             "right": "0"
           },
           "end_out": {
-            "direction": "O"
-          }
-        }
-      },
-      "Time_Stamp_0": {
-        "vlnv": "xilinx.com:module_ref:Time_Stamp:1.0",
-        "xci_name": "BD_wo_axi_Time_Stamp_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Time_Stamp",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "BD_wo_axi_processing_system7_0_0_FCLK_CLK1"
-              },
-              "FREQ_HZ": {
-                "value": "10000000"
-              }
-            }
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "tlast_trigger": {
-            "direction": "I"
-          },
-          "Cycle_count": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "overflow": {
             "direction": "O"
           }
         }
@@ -1108,6 +1084,12 @@
           }
         },
         "interface_nets": {
+          "axi_interconnect_0_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
           "s00_couplers_to_xbar": {
             "interface_ports": [
               "s00_couplers/M_AXI",
@@ -1132,22 +1114,16 @@
               "m01_couplers/M_AXI"
             ]
           },
-          "axi_interconnect_0_to_s00_couplers": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           },
           "m02_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M02_AXI",
               "m02_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
             ]
           },
           "xbar_to_m02_couplers": {
@@ -1162,16 +1138,16 @@
               "m03_couplers/M_AXI"
             ]
           },
-          "m04_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M04_AXI",
-              "m04_couplers/M_AXI"
-            ]
-          },
           "xbar_to_m03_couplers": {
             "interface_ports": [
               "xbar/M03_AXI",
               "m03_couplers/S_AXI"
+            ]
+          },
+          "m04_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M04_AXI",
+              "m04_couplers/M_AXI"
             ]
           },
           "xbar_to_m04_couplers": {
@@ -1379,24 +1355,6 @@
           }
         }
       },
-      "CZT_SPI_Comm_ILA": {
-        "vlnv": "xilinx.com:ip:system_ila:1.1",
-        "xci_name": "BD_wo_axi_system_ila_0_0",
-        "parameters": {
-          "C_MON_TYPE": {
-            "value": "NATIVE"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "7"
-          },
-          "C_PROBE4_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_WIDTH_PROPAGATION": {
-            "value": "MANUAL"
-          }
-        }
-      },
       "FIFO_ILA": {
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "BD_wo_axi_ila_0_1",
@@ -1426,6 +1384,76 @@
             "value": "64"
           }
         }
+      },
+      "Time_Stamp_0": {
+        "vlnv": "xilinx.com:module_ref:Time_Stamp:1.0",
+        "xci_name": "BD_wo_axi_Time_Stamp_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Time_Stamp",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "BD_wo_axi_processing_system7_0_0_FCLK_CLK1"
+              },
+              "FREQ_HZ": {
+                "value": "10000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "tlast_trigger": {
+            "direction": "I"
+          },
+          "Cycle_count": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "overflow": {
+            "direction": "O"
+          }
+        }
+      },
+      "CZT_SPI_Comm_ILA": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "BD_wo_axi_ila_0_2",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "6"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "32"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1433,6 +1461,18 @@
         "interface_ports": [
           "DDR",
           "processing_system7_0/DDR"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "processing_system7_0_UART_1": {
+        "interface_ports": [
+          "UART_1_0",
+          "processing_system7_0/UART_1"
         ]
       },
       "axi_interconnect_0_M03_AXI": {
@@ -1447,16 +1487,10 @@
           "FIFO_Full_Empty/S_AXI"
         ]
       },
-      "processing_system7_0_UART_1": {
+      "axi_interconnect_0_M01_AXI": {
         "interface_ports": [
-          "UART_1_0",
-          "processing_system7_0/UART_1"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "axi_interconnect_0/M01_AXI",
+          "CZT_WR_Req/S_AXI"
         ]
       },
       "axi_interconnect_0_M00_AXI": {
@@ -1465,22 +1499,16 @@
           "Cmd_Out/S_AXI"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "axi_clock_converter_0/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M01_AXI": {
-        "interface_ports": [
-          "axi_interconnect_0/M01_AXI",
-          "CZT_WR_Req/S_AXI"
-        ]
-      },
       "axi_interconnect_0_M04_AXI": {
         "interface_ports": [
           "axi_interconnect_0/M04_AXI",
           "FIFO_Read_Data/S_AXI"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "axi_clock_converter_0/S_AXI"
         ]
       },
       "S00_AXI_1": {
@@ -1496,7 +1524,6 @@
           "processing_system7_0/FCLK_CLK1",
           "Serial_to_Parallel_0/clk",
           "CZT_SPI_Comm_0/clk",
-          "Time_Stamp_0/clk",
           "axi_clock_converter_0/m_axi_aclk",
           "axi_interconnect_0/ACLK",
           "axi_interconnect_0/S00_ACLK",
@@ -1510,8 +1537,7 @@
           "Cmd_Out/s_axi_aclk",
           "CZT_WR_Req/s_axi_aclk",
           "CZT_Data_RW/s_axi_aclk",
-          "CZT_SPI_Comm_ILA/clk",
-          "FIFO_ILA/clk"
+          "Time_Stamp_0/clk"
         ]
       },
       "Serial_to_Parallel_0_Parallel": {
@@ -1559,7 +1585,6 @@
           "axi_interconnect_0/M03_ARESETN",
           "axi_interconnect_0/M04_ARESETN",
           "CZT_SPI_Comm_0/reset",
-          "Time_Stamp_0/reset",
           "Serial_to_Parallel_0/reset",
           "fifo_generator_0/rd_en",
           "fifo_generator_0/wr_en",
@@ -1568,22 +1593,23 @@
           "FIFO_Read_Data/s_axi_aresetn",
           "Cmd_Out/s_axi_aresetn",
           "CZT_WR_Req/s_axi_aresetn",
-          "CZT_Data_RW/s_axi_aresetn"
+          "CZT_Data_RW/s_axi_aresetn",
+          "Time_Stamp_0/reset"
         ]
       },
       "CZT_SPI_Comm_0_SSbar": {
         "ports": [
           "CZT_SPI_Comm_0/SSbar",
           "SSbar_0",
-          "CZT_SPI_Comm_ILA/probe1",
-          "FIFO_ILA/probe8"
+          "FIFO_ILA/probe8",
+          "CZT_SPI_Comm_ILA/probe0"
         ]
       },
       "CZT_SPI_Comm_0_MOSI": {
         "ports": [
           "CZT_SPI_Comm_0/MOSI",
           "MOSI_0",
-          "CZT_SPI_Comm_ILA/probe2"
+          "CZT_SPI_Comm_ILA/probe1"
         ]
       },
       "CZT_SPI_Comm_0_SCK": {
@@ -1596,17 +1622,17 @@
         "ports": [
           "MISO_0",
           "CZT_SPI_Comm_0/MISO",
-          "CZT_SPI_Comm_ILA/probe3",
-          "FIFO_ILA/probe9"
+          "FIFO_ILA/probe9",
+          "CZT_SPI_Comm_ILA/probe2"
         ]
       },
       "m_axis_tlast_wire": {
         "ports": [
           "CZT_SPI_Comm_0/m_axis_tlast",
-          "Time_Stamp_0/tlast_trigger",
           "Serial_to_Parallel_0/end_in",
           "fifo_generator_0/wr_clk",
-          "FIFO_ILA/probe4"
+          "FIFO_ILA/probe4",
+          "Time_Stamp_0/tlast_trigger"
         ]
       },
       "fifo_generator_0_prog_full": {
@@ -1641,7 +1667,7 @@
         "ports": [
           "CZT_SPI_Comm_0/data_read",
           "CZT_Data_RW/gpio_io_i",
-          "CZT_SPI_Comm_ILA/probe4"
+          "CZT_SPI_Comm_ILA/probe3"
         ]
       },
       "CZT_SPI_Comm_0_read_value_out": {
@@ -1654,7 +1680,7 @@
         "ports": [
           "CZT_SPI_Comm_0/rd_avail",
           "processing_system7_0/GPIO_I",
-          "CZT_SPI_Comm_ILA/probe5"
+          "CZT_SPI_Comm_ILA/probe4"
         ]
       },
       "CZT_SPI_Comm_0_event_avail": {
@@ -1681,7 +1707,7 @@
         "ports": [
           "CZT_WR_Req/gpio2_io_o",
           "CZT_SPI_Comm_0/rd_req",
-          "CZT_SPI_Comm_ILA/probe6"
+          "CZT_SPI_Comm_ILA/probe5"
         ]
       },
       "CZT_Data_RW_gpio2_io_o": {
@@ -1726,6 +1752,13 @@
           "proc_sys_reset_0/slowest_sync_clk",
           "axi_clock_converter_0/s_axi_aclk",
           "processing_system7_0/M_AXI_GP0_ACLK"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK2": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK2",
+          "CZT_SPI_Comm_ILA/clk",
+          "FIFO_ILA/clk"
         ]
       }
     },

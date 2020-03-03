@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Feb 19 16:29:21 2020
+--Date        : Fri Feb 28 12:17:57 2020
 --Host        : DESKTOP-HM1JLKG running 64-bit major release  (build 9200)
 --Command     : generate_target BD_wo_axi.bd
 --Design      : BD_wo_axi
@@ -1870,6 +1870,7 @@ architecture STRUCTURE of BD_wo_axi is
     M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
     FCLK_CLK0 : out STD_LOGIC;
     FCLK_CLK1 : out STD_LOGIC;
+    FCLK_CLK2 : out STD_LOGIC;
     FCLK_RESET0_N : out STD_LOGIC;
     MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     DDR_CAS_n : inout STD_LOGIC;
@@ -2045,15 +2046,6 @@ architecture STRUCTURE of BD_wo_axi is
     end_out : out STD_LOGIC
   );
   end component BD_wo_axi_Serial_to_Parallel_0_0;
-  component BD_wo_axi_Time_Stamp_0_0 is
-  port (
-    tlast_trigger : in STD_LOGIC;
-    Cycle_count : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    overflow : out STD_LOGIC;
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC
-  );
-  end component BD_wo_axi_Time_Stamp_0_0;
   component BD_wo_axi_xlconcat_0_0 is
   port (
     In0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2185,18 +2177,6 @@ architecture STRUCTURE of BD_wo_axi is
     gpio2_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component BD_wo_axi_WR_Req_Out_0;
-  component BD_wo_axi_system_ila_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component BD_wo_axi_system_ila_0_0;
   component BD_wo_axi_ila_0_1 is
   port (
     clk : in STD_LOGIC;
@@ -2218,6 +2198,26 @@ architecture STRUCTURE of BD_wo_axi is
     probe15 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component BD_wo_axi_ila_0_1;
+  component BD_wo_axi_Time_Stamp_0_0 is
+  port (
+    tlast_trigger : in STD_LOGIC;
+    Cycle_count : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    overflow : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC
+  );
+  end component BD_wo_axi_Time_Stamp_0_0;
+  component BD_wo_axi_ila_0_2 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component BD_wo_axi_ila_0_2;
   signal CZT_Data_RW_gpio2_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal CZT_SPI_Comm_0_MOSI : STD_LOGIC;
   signal CZT_SPI_Comm_0_SCK : STD_LOGIC;
@@ -2384,6 +2384,7 @@ architecture STRUCTURE of BD_wo_axi is
   signal processing_system7_0_DDR_WE_N : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK1 : STD_LOGIC;
+  signal processing_system7_0_FCLK_CLK2 : STD_LOGIC;
   signal processing_system7_0_FCLK_RESET0_N : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRN : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRP : STD_LOGIC;
@@ -2521,16 +2522,15 @@ CZT_SPI_Comm_0: component BD_wo_axi_CZT_SPI_Comm_0_0
       wr_command(9 downto 0) => Net(9 downto 0),
       wr_req => CZT_WR_Req_gpio_io_o(0)
     );
-CZT_SPI_Comm_ILA: component BD_wo_axi_system_ila_0_0
+CZT_SPI_Comm_ILA: component BD_wo_axi_ila_0_2
      port map (
-      clk => processing_system7_0_FCLK_CLK1,
-      probe0(0) => '0',
-      probe1(0) => CZT_SPI_Comm_0_SSbar,
-      probe2(0) => CZT_SPI_Comm_0_MOSI,
-      probe3(0) => MISO_1,
-      probe4(31 downto 0) => CZT_SPI_Comm_0_data_read(31 downto 0),
-      probe5(0) => CZT_SPI_Comm_0_rd_avail,
-      probe6(0) => CZT_WR_Req_gpio2_io_o(0)
+      clk => processing_system7_0_FCLK_CLK2,
+      probe0(0) => CZT_SPI_Comm_0_SSbar,
+      probe1(0) => CZT_SPI_Comm_0_MOSI,
+      probe2(0) => MISO_1,
+      probe3(31 downto 0) => CZT_SPI_Comm_0_data_read(31 downto 0),
+      probe4(0) => CZT_SPI_Comm_0_rd_avail,
+      probe5(0) => CZT_WR_Req_gpio2_io_o(0)
     );
 CZT_WR_Req: component BD_wo_axi_Cmd_Out_0
      port map (
@@ -2605,7 +2605,7 @@ FIFO_Full_Empty: component BD_wo_axi_axi_gpio_0_0
     );
 FIFO_ILA: component BD_wo_axi_ila_0_1
      port map (
-      clk => processing_system7_0_FCLK_CLK1,
+      clk => processing_system7_0_FCLK_CLK2,
       probe0(31 downto 0) => Serial_to_Parallel_0_Parallel(31 downto 0),
       probe1(31 downto 0) => Time_Stamp_0_Cycle_count(31 downto 0),
       probe10(0) => fifo_generator_0_wr_ack,
@@ -2942,6 +2942,7 @@ processing_system7_0: component BD_wo_axi_processing_system7_0_0
       DDR_WEB => DDR_we_n,
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_CLK1 => processing_system7_0_FCLK_CLK1,
+      FCLK_CLK2 => processing_system7_0_FCLK_CLK2,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
       GPIO_I(0) => CZT_SPI_Comm_0_rd_avail,
       GPIO_O(0) => NLW_processing_system7_0_GPIO_O_UNCONNECTED(0),

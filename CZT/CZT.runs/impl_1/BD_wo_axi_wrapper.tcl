@@ -60,14 +60,14 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config  -id {BD 41-1347}  -suppress 
-set_msg_config  -id {BD 41-1344}  -suppress 
-set_msg_config  -id {BD 41-1348}  -suppress 
-set_msg_config  -id {BD 41-1343}  -suppress 
-set_msg_config  -id {IP_Flow 19-2207}  -suppress 
-set_msg_config  -id {Synth 8-3331}  -string {{WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In2[0]}}  -suppress 
 set_msg_config  -id {Synth 8-3331}  -suppress 
+set_msg_config  -id {IP_Flow 19-3153}  -suppress 
+set_msg_config  -id {IP_Flow 19-2207}  -suppress 
+set_msg_config  -id {IP_Flow 19-5463}  -suppress 
+set_msg_config  -id {IP_Flow 19-5462}  -suppress 
+set_msg_config  -id {IP_Flow 19-3480}  -suppress 
+set_msg_config  -id {IP_Flow 19-1965}  -suppress 
+set_msg_config  -id {Synth 8-3295}  -suppress 
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream

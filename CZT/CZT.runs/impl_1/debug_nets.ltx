@@ -11,11 +11,11 @@
                         "type": "XSDB_V3",
                         "name": "dbg_hub",
                         "spec": "labtools_xsdbm_v3",
-                        "clk_input_freq_hz": "9999999"
+                        "clk_input_freq_hz": "30000301"
                     },
                     {
                         "type": "ILA_V3",
-                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/ila_lib",
+                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA",
                         "spec": "labtools_ila_v6",
                         "ipName": "ila",
                         "core_location": {
@@ -23,7 +23,7 @@
                             "slave_index": 0,
                             "bscan_switch_index": 0
                         },
-                        "uuid": "9811F8F82D2359538AB03EB9D3BEDB03",
+                        "uuid": "EC82FA1AB3845DDE854887E914938D22",
                         "pins": [
                             {
                                 "name": "probe0",
@@ -36,7 +36,7 @@
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe0_1",
+                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_0_SSbar_1",
                                         "isBus": false
                                     }
                                 ]
@@ -52,7 +52,7 @@
                                 "portIndex": 1,
                                 "nets": [
                                     {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe1_1",
+                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_0_MOSI",
                                         "isBus": false
                                     }
                                 ]
@@ -68,7 +68,7 @@
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe2_1",
+                                        "name": "BD_wo_axi_i/MISO_1_1",
                                         "isBus": false
                                     }
                                 ]
@@ -78,14 +78,112 @@
                                 "id": 3,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 31,
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe3_1",
-                                        "isBus": false
+                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[31]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[30]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[29]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[28]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[27]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[26]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[25]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[24]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[23]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[22]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[21]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[20]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[19]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[18]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[17]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[16]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[15]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[14]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[13]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[12]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[11]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[10]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[9]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[8]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[7]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[6]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[5]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[4]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[3]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[2]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[1]"
+                                            },
+                                            {
+                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_0_data_read[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -94,112 +192,14 @@
                                 "id": 4,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": true,
+                                "isVector": false,
                                 "leftIndex": 0,
-                                "rightIndex": 31,
+                                "rightIndex": 0,
                                 "portIndex": 4,
                                 "nets": [
                                     {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[31]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[30]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[29]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[28]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[27]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[26]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[25]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[24]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[23]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[22]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[21]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[20]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[19]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[18]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[17]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[16]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[15]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[14]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[13]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[12]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[11]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[10]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[9]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[8]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[7]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[6]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[5]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[4]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[3]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[2]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[1]"
-                                            },
-                                            {
-                                                "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe4_1[0]"
-                                            }
-                                        ]
+                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_0_rd_avail",
+                                        "isBus": false
                                     }
                                 ]
                             },
@@ -214,136 +214,8 @@
                                 "portIndex": 5,
                                 "nets": [
                                     {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe5_1",
+                                        "name": "BD_wo_axi_i/CZT_WR_Req_gpio2_io_o",
                                         "isBus": false
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe6",
-                                "id": 6,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 6,
-                                "nets": [
-                                    {
-                                        "name": "BD_wo_axi_i/CZT_SPI_Comm_ILA/U0/probe6_1",
-                                        "isBus": false
-                                    }
-                                ]
-                            }
-                        ],
-                        "native_ports": [
-                            {
-                                "name": "probe0",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe0",
-                                        "physical_pin": {
-                                            "id": 0,
-                                            "name": "probe0",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe1",
-                                "connectedBus": "CZT_SPI_Comm_0_SSbar",
-                                "protocol": "PROBE",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe1",
-                                        "physical_pin": {
-                                            "id": 1,
-                                            "name": "probe1",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe2",
-                                "connectedBus": "MOSI_0",
-                                "protocol": "PROBE",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe2",
-                                        "physical_pin": {
-                                            "id": 2,
-                                            "name": "probe2",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe3",
-                                "connectedBus": "MISO_1",
-                                "protocol": "PROBE",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe3",
-                                        "physical_pin": {
-                                            "id": 3,
-                                            "name": "probe3",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe4",
-                                "connectedBus": "CZT_SPI_Comm_0_data_read_0",
-                                "protocol": "PROBE",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe4",
-                                        "physical_pin": {
-                                            "id": 4,
-                                            "name": "probe4",
-                                            "leftBit": 0,
-                                            "width": 32
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe5",
-                                "connectedBus": "CZT_SPI_Comm_0_rd_avail",
-                                "protocol": "PROBE",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe5",
-                                        "physical_pin": {
-                                            "id": 5,
-                                            "name": "probe5",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    }
-                                ]
-                            },
-                            {
-                                "name": "probe6",
-                                "connectedBus": "CZT_WR_Req_gpio2_io_o_0",
-                                "protocol": "PROBE",
-                                "port_maps": [
-                                    {
-                                        "logical_port": "probe6",
-                                        "physical_pin": {
-                                            "id": 6,
-                                            "name": "probe6",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
                                     }
                                 ]
                             }
@@ -363,7 +235,7 @@
                         "pins": [
                             {
                                 "name": "probe0",
-                                "id": 7,
+                                "id": 6,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -477,7 +349,7 @@
                             },
                             {
                                 "name": "probe1",
-                                "id": 8,
+                                "id": 7,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -591,7 +463,7 @@
                             },
                             {
                                 "name": "probe2",
-                                "id": 9,
+                                "id": 8,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -801,7 +673,7 @@
                             },
                             {
                                 "name": "probe3",
-                                "id": 10,
+                                "id": 9,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -915,7 +787,7 @@
                             },
                             {
                                 "name": "probe4",
-                                "id": 11,
+                                "id": 10,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -931,7 +803,7 @@
                             },
                             {
                                 "name": "probe5",
-                                "id": 12,
+                                "id": 11,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -947,7 +819,7 @@
                             },
                             {
                                 "name": "probe6",
-                                "id": 13,
+                                "id": 12,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -963,7 +835,7 @@
                             },
                             {
                                 "name": "probe7",
-                                "id": 14,
+                                "id": 13,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -979,7 +851,7 @@
                             },
                             {
                                 "name": "probe8",
-                                "id": 15,
+                                "id": 14,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -995,7 +867,7 @@
                             },
                             {
                                 "name": "probe9",
-                                "id": 16,
+                                "id": 15,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -1011,7 +883,7 @@
                             },
                             {
                                 "name": "probe10",
-                                "id": 17,
+                                "id": 16,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -1027,7 +899,7 @@
                             },
                             {
                                 "name": "probe11",
-                                "id": 18,
+                                "id": 17,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -1043,7 +915,7 @@
                             },
                             {
                                 "name": "probe12",
-                                "id": 19,
+                                "id": 18,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -1106,7 +978,7 @@
                             },
                             {
                                 "name": "probe13",
-                                "id": 20,
+                                "id": 19,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": true,
@@ -1166,7 +1038,7 @@
                             },
                             {
                                 "name": "probe14",
-                                "id": 21,
+                                "id": 20,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,
@@ -1182,7 +1054,7 @@
                             },
                             {
                                 "name": "probe15",
-                                "id": 22,
+                                "id": 21,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
                                 "isVector": false,

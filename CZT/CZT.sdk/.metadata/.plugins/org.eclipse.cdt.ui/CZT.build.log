@@ -1,23 +1,23 @@
-23:03:19 **** Auto Build of configuration Debug for project CZT ****
+11:04:49 **** Auto Build of configuration Debug for project CZT ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/SPIFunctions.c'
+'Building file: ../src/xuartps_hello_world.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -I../../CZT_bsp/ps7_cortexa9_0/include -I"F:\DAKSHA\CommSrcs\FPGA\CZT\CZT.sdk\BD_wo_axi_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/SPIFunctions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/SPIFunctions.d" -MT"src/SPIFunctions.o" -o "src/SPIFunctions.o" "../src/SPIFunctions.c"
-'Finished building: ../src/SPIFunctions.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -I"F:\DAKSHA\CommSrcs\FPGA\CZT\CZT.sdk\CZT_bsp\ps7_cortexa9_0\include" -I"F:\DAKSHA\CommSrcs\FPGA\CZT\CZT.sdk\BD_wo_axi_wrapper_hw_platform_0" -c -fmessage-length=0 -MT"src/xuartps_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/xuartps_hello_world.d" -MT"src/xuartps_hello_world.o" -o "src/xuartps_hello_world.o" "../src/xuartps_hello_world.c"
+'Finished building: ../src/xuartps_hello_world.c'
 ' '
 'Building target: CZT.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CZT_bsp/ps7_cortexa9_0/lib -o "CZT.elf"  ./src/SPIFunctions.o ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../CZT_bsp/ps7_cortexa9_0/lib -o "CZT.elf"  ./src/SPIFunctions.o ./src/main.o ./src/platform.o ./src/xuartps_hello_world.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: CZT.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size CZT.elf  |tee "CZT.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  87096	   2584	  23328	 113008	  1b970	CZT.elf
+  34924	   8792	  23336	  67052	  105ec	CZT.elf
 'Finished building: CZT.elf.size'
 ' '
 
-23:03:20 Build Finished (took 1s.226ms)
+11:04:50 Build Finished (took 1s.62ms)
 

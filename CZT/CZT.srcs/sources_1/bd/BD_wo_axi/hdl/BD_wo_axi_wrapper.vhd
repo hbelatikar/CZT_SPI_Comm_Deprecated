@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Feb 19 16:29:21 2020
+--Date        : Fri Feb 28 12:17:58 2020
 --Host        : DESKTOP-HM1JLKG running 64-bit major release  (build 9200)
 --Command     : generate_target BD_wo_axi_wrapper.bd
 --Design      : BD_wo_axi_wrapper

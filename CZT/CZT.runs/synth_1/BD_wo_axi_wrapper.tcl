@@ -17,12 +17,14 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
-set_msg_config  -id {BD 41-1347}  -suppress 
-set_msg_config  -id {BD 41-1344}  -suppress 
-set_msg_config  -id {BD 41-1348}  -suppress 
-set_msg_config  -id {BD 41-1343}  -suppress 
+set_msg_config  -id {Synth 8-3331}  -suppress 
+set_msg_config  -id {IP_Flow 19-3153}  -suppress 
 set_msg_config  -id {IP_Flow 19-2207}  -suppress 
+set_msg_config  -id {IP_Flow 19-5463}  -suppress 
+set_msg_config  -id {IP_Flow 19-5462}  -suppress 
+set_msg_config  -id {IP_Flow 19-3480}  -suppress 
+set_msg_config  -id {IP_Flow 19-1965}  -suppress 
+set_msg_config  -id {Synth 8-3295}  -suppress 
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -72,16 +74,14 @@ set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPG
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_WR_Req_Out_0/BD_wo_axi_WR_Req_Out_0_board.xdc]
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_WR_Req_Out_0/BD_wo_axi_WR_Req_Out_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_WR_Req_Out_0/BD_wo_axi_WR_Req_Out_0.xdc]
-set_property used_in_synthesis false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/ip/ip_0/bd_abc7_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/bd_0/bd_abc7_ooc.xdc]
-set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_system_ila_0_0/BD_wo_axi_system_ila_0_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_1/BD_wo_axi_ila_0_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_ila_0_2/BD_wo_axi_ila_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all f:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/ip/BD_wo_axi_auto_pc_0/BD_wo_axi_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all F:/DAKSHA/CommSrcs/FPGA/CZT/CZT.srcs/sources_1/bd/BD_wo_axi/BD_wo_axi_ooc.xdc]
 

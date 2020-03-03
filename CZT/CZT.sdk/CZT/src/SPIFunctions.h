@@ -2,7 +2,7 @@
  * SPIFunctions.h
  *
  *  Created on: Feb 19, 2020
- *      Author: Hrishikesh
+ *      Author: HSB
  */
 
 #ifndef SRC_SPIFUNCTIONS_H_
@@ -36,5 +36,8 @@
 
 	void writeConfigToCZT(u32,u32);
 	u32  readConfigFromCZT(u32);
+
+	u32 parityCalc(u32);
+	u32 joinDataBitPar(u32, char);
 
 #endif /* SRC_SPIFUNCTIONS_H_ */

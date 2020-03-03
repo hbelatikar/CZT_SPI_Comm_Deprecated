@@ -2,7 +2,7 @@
  * SPIFunctions.c
  *
  *  Created on: Feb 19, 2020
- *      Author: Hrishikesh
+ *      Author: HSB
  */
 
 #include <stdio.h>
@@ -90,5 +90,26 @@ readConfigFromCZT(u32 cmd){
 	readData = Xil_In32(CZT_DATA_RW_DATAIN_IN);
 
 	return readData;
+}
+
+u32
+parityCalc(u32 val){
+	val ^= (val >> 16);
+	val ^= (val >> 8);
+	val ^= (val >> 4);
+	val ^= (val >> 2);
+	val ^= (val >> 1);
+
+	return (u32) (val & 0x1);
+}
+
+u32
+joinDataBitPar(u32 data, char CWFlag){
+	u32 parity;
+	//Note:- Since we are going to shift the data by one bit we will set the 17th bit high and not the 18th
+	data = (CWFlag)? (data | 0x10000): (data);	//Set the bit high according to CZT data sheet
+	parity = parityCalc(data);	//Calculate the parity of the 32 bit data
+	data = (data <<1)|parity;	//Left shift and append parity to the data
+	return data;
 }
 
